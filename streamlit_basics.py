@@ -21,7 +21,7 @@ def set_bg_from_local(image_file):
     )
 
 # Use your local file path here
-set_bg_from_local("C:\\Users\\Krishnapriya\\Downloads\\download.jpeg")
+set_bg_from_local("download.jpeg")
 
 st.title("My First Streamlit App")
 
