@@ -42,7 +42,7 @@ st.title("My First Streamlit App")
 
 
 # Creating tabs for organizing content
-tab1, tab2, tab3 = st.tabs(["Basics", "Interactive Widgets", "Visualizations"])
+tab1, tab2, tab3, tab4 = st.tabs(["Basics", "Interactive Widgets", "Visualizations", "LLM Integration])
 with tab1:
 	# Basic Streamlit elements
     # Setting the title and headers
@@ -202,5 +202,25 @@ with tab3:
 	).interactive()     
 	st.altair_chart(alt_chart, use_container_width=True)
 	st.write("This is an interactive scatter plot using Altair.")
-	
+
+with tab4: 
+	import streamlit as st
+	import google.generativeai as genai
+
+	# Configure API
+	genai.configure(api_key="your_key_here")  # Replace with your key or load from env
+
+	# Streamlit UI
+	st.title("💬 Gemini Chatbot in Streamlit")
+	prompt = st.text_area("Enter your message:", height=150)
+
+	if st.button("Generate Response"):
+   	 if prompt.strip():
+     	   with st.spinner("Generating response..."):
+	 	response = generate_response(prompt)
+   		st.markdown("**Gemini says:**")
+     		st.write(response)
+  	  else:
+       	 	st.warning("Please enter a message.")
+
 	
