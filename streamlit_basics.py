@@ -42,7 +42,7 @@ st.title("My First Streamlit App")
 
 
 # Creating tabs for organizing content
-tab1, tab2, tab3, tab4 = st.tabs(["Basics", "Interactive Widgets", "Visualizations", "LLM Integration])
+tab1, tab2, tab3, tab4 = st.tabs(["Basics", "Interactive Widgets", "Visualizations", "LLM Integration"])
 with tab1:
 	# Basic Streamlit elements
     # Setting the title and headers
