@@ -208,7 +208,7 @@ with tab4:
 	import google.generativeai as genai
 
 	# Configure API
-	genai.configure(api_key="your_key_here")  # Replace with your key or load from env
+	genai.configure(api_key="AIzaSyAp8dYX_4kErPhgBQbULuKRtCksbN3075I")
 
 	# Streamlit UI
 	st.title("💬 Gemini Chatbot in Streamlit")
