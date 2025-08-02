@@ -207,7 +207,7 @@ with tab4:
 	from google.generativeai.types import GenerationConfig
 
 	# 🔐 Configure Gemini API key
-	genai.configure(api_key="AIzaSyAp8dYX_4kErPhgBQbULuKRtCksbN3075I")  # Replace with your real key
+	genai.configure(api_key=st.secrets["gemini_api_key"])  # Replace with your real key
 
 	# 🧠 Initialize the model once (not inside function or button)
 	@st.cache_resource
@@ -238,3 +238,4 @@ with tab4:
 					st.write(response.text)
 				except Exception as e:
 					st.error(f"❌ Error occurred: {e}")
+
